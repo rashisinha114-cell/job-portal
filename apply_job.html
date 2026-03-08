@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Job</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<div class="container">
+    <h2>Upload Resume</h2>
+
+    <form method="POST" action="/apply-job" enctype="multipart/form-data">
+        <input type="hidden" name="jid" value="{{ jid }}">
+        <input type="file" name="resume" required>
+        <button type="submit">Apply</button>
+    </form>
+</div>
+
+</body>
+</html>
